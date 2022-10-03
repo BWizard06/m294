@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>//2.
+        let person = {
+            name: "Ben",
+            age: 16,
+            beruf: "Schüler",
+        };
+        
+        //3.
+        for (let i = 0; i < Object.keys(person).length; i++) {
+            console.log(Object.keys(person)[i]);
+        }
+        
+        //4.
+        for (let i = 0; i < Object.values(person).length; i++) {
+            console.log(Object.values(person)[i]);
+        }
+        
+        //5.
+        let person2 ={
+            beruf: "Lehrer"
+        }
+        
+        //6.
+        person2["Lebensstatus"] = "verheiratet";
+        
+        for (let i = 0; i < Object.keys(person2).length; i++) {
+            console.log(Object.keys(person2)[i] + ": " + Object.values(person2)[i]);
+        }</script>
+</head>
+<body>
+    
+</body>
+</html>
