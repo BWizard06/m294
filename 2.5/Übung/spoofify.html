@@ -9,6 +9,7 @@
 </head>
 <body>
     <h1>Spoofify</h1>
+    <button id="btn">change Backgrouncolor</button>
     <p>Welcome to Spoofify, <i>rip-off music streaming service of</i> ICT Module 291!</p>
     <h1>Top Albums of the Week</h1>
     <div class="bilder">
@@ -70,7 +71,8 @@
     album2.after(newAlbum);
     //CSS Änderungen
     //1. Ändern Sie die Farbe des Hintergrundes
-    document.getElementsByTagName("body")[0].style.backgroundColor = "red";
+    let body = document.getElementsByTagName("body");
+    body[0].style.backgroundColor = "red"
     //2. Ändern Sie die Schriftgrösse von allen h1-Elementen
     const titles = document.getElementsByTagName("h1");
     for (title of titles){
@@ -81,6 +83,13 @@
     for (listItem of listItems) {
         listItem.style.padding = "9px";
     }
-
+    //Extra Funktion Button zum ändern der Hintergrundfarbe
+    document.addEventListener('DOMContentLoaded', () => {
+            function changeBackground() {
+                body[0].style.backgroundColor = "green";
+            }
+            const button = document.getElementById('btn')
+            button.addEventListener('click', changeBackground);
+        });
 </script>
 </html>
