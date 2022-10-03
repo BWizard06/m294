@@ -40,6 +40,21 @@ function toCaesar(input){
 for (let i = 0; i < namen.length; i++) {
     console.log(`Name: ${toCaesar(namen[i])}`);
 }
+
+//5.
+console.log("Aufgabe 5:");
+//count how many names exist with the same beginning letter
+const firstLetter = namen.map((name) => name[0]);
+const firstLetterCount = firstLetter.reduce((acc, letter) => {
+    if(acc[letter]){
+        acc[letter]++;
+    } else {
+        acc[letter] = 1;
+    }
+    return acc;
+}, {});
+console.log(firstLetterCount);
+
     </script>
 </head>
 <body>
