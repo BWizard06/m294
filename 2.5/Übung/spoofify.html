@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="spoofify_style.css">
+    <title>Spoofify</title>
+</head>
+<body>
+    <h1>Spoofify</h1>
+    <p>Welcome to Spoofify, <i>rip-off music streaming service of</i> ICT Module 291!</p>
+    <h1>Top Albums of the Week</h1>
+    <div class="bilder">
+        <img src="https://loremflickr.com/320/240" />
+        <img src="https://loremflickr.com/320/240" />
+        <img src="https://loremflickr.com/320/240" />
+        <img src="https://loremflickr.com/320/240" />
+        <img src="https://loremflickr.com/320/240" />
+        <img src="https://loremflickr.com/320/240" />
+        <img src="https://loremflickr.com/320/240" />
+        <img src="https://loremflickr.com/320/240" />
+        <img src="https://loremflickr.com/320/240" />
+        <img src="https://loremflickr.com/320/240" />
+    </div>
+    <h1>Albums</h1>
+    <h2>The Beatles - Help!</h2>
+    <ol>
+        <li>Help (2:18)</li>
+        <li>The night before (2:34)</li>
+        <li>You've got to hide your love away (2:09)</li>
+        <li>I need you (2:28)</li>
+        <li>Another Girl (2:05)</li>
+        <li>You're going to lose that girl (2:18)</li>
+        <li>Ticket to ride (3:09)</li>
+    </ol>
+    <h2>Nirvana - Nevermind</h2>
+    <ol>
+        <li>Smells Like Teen Spirit (5:01)</li>
+        <li>In Bloom (Nevermind Version) (4:14)</li>
+        <li>Come as You Are (3:38)</li>
+        <li>Breed (Album Version) (3:03)</li>
+        <li>Lithium (4:16)</li>
+        <li>Polly (Album Version) (2:53)</li>
+    </ol>
+    
+</body>
+<script>
+    //HTML Änderungen
+    //1. Ändern Sie den Namen eines bestehenden Albums
+    document.getElementsByTagName("h2")[0].innerHTML = "Album1";
+    //2. Ändern Sie den Track-Namen sowie die Track Zeit eines bestehenden Albums
+    const album2 = document.getElementsByTagName("ol")[1];
+    album2.getElementsByTagName("li")[0].innerHTML = "Song1 (3:18)";
+    //document.getElementsByTagName("li")[7].innerHTML = "Song1 (3:18)";
+    //3. Löschen Sie einen Track eines bestehenden Albums
+    const deleteTrack = document.getElementsByTagName("li")[1];
+    deleteTrack.remove();
+    //4. Löschen Sie ein bestehendes Album
+    const deleteAlbum = document.getElementsByTagName("h2")[1];
+    deleteAlbum.remove();
+    //5. Fügen Sie einen neuen Track zu einem bestehenden Album hinzu
+    let newTrack = document.createElement("li");
+    newTrack.innerHTML = "Added Song (4:20)";
+    const album1 = document.getElementsByTagName("ol")[0];
+    album1.append(newTrack);
+    //6. Fügen Sie ein neues Album hinzu
+    let newAlbum = document.createElement("h2");
+    newAlbum.innerHTML = "Album3";
+    album2.after(newAlbum);
+    //CSS Änderungen
+    //1. Ändern Sie die Farbe des Hintergrundes
+    document.getElementsByTagName("body")[0].style.backgroundColor = "red";
+    //2. Ändern Sie die Schriftgrösse von allen h1-Elementen
+    const titles = document.getElementsByTagName("h1");
+    for (title of titles){
+        title.style.fontSize = "50px";
+    }
+    //3. Ändern Sie das Padding von allen Listenelementen
+    const listItems = document.getElementsByTagName("li");
+    for (listItem of listItems) {
+        listItem.style.padding = "9px";
+    }
+
+</script>
+</html>

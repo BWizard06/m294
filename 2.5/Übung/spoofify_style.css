@@ -1,0 +1,36 @@
+body {
+    background-color: #3ADF00;
+    font-family: sans-serif;
+}
+
+h1 {
+    color: white;
+}
+
+h2 {
+    color: black;
+}
+
+p {
+    color: black;
+}
+
+ol {
+    color: black;
+}
+
+img {
+    padding: 5px;
+    width: 150px;
+}
+
+.bilder {
+    width: 80%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    margin: 0;
+    padding: 0;
+    gap: 2rem;
+
+}
