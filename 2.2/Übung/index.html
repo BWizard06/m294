@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+//1.
+console.log("Aufgabe 1:");
+const namen = ["Franz", "Jenny", "Karen", "Joseph", "Richard", "Florenze"];
+for (let i = 0; i < namen.length; i++) {
+    console.log(`Name: ${namen[i]}`);
+}
+//2.
+console.log("Aufgabe 2:");
+namen.sort();
+console.log(namen);
+//3.
+console.log("Aufgabe 3:");
+const upperNamen = namen.map((name) => name.toUpperCase());
+console.log(upperNamen);
+
+const lowerNamen = namen.map((name) =>name.toLowerCase());
+console.log(lowerNamen)
+//4.
+console.log("Aufgabe 4:");
+function toCaesar(input){
+    const names = input.split("");
+    const newNames = names.map((character) => {
+        const charCode = character.charCodeAt(0);
+        if(charCode <= "Z". charCodeAt()){
+            return String.fromCharCode((charCode - "A".charCodeAt() + 13) % 26 + "A".charCodeAt());
+        } else {
+            return String.fromCharCode((charCode - "a".charCodeAt() + 13) % 26 + "a".charCodeAt());
+        }
+    });
+    return newNames.join("");
+}
+for (let i = 0; i < namen.length; i++) {
+    console.log(`Name: ${toCaesar(namen[i])}`);
+}
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,51 @@
+//1.
+console.log("Aufgabe 1:");
+const namen = ["Franz", "Jenny", "Karen", "Joseph", "Richard", "Florenze"];
+for (let i = 0; i < namen.length; i++) {
+    console.log(`Name: ${namen[i]}`);
+}
+//2.
+console.log("Aufgabe 2:");
+namen.sort();
+console.log(namen);
+//3.
+console.log("Aufgabe 3:");
+const upperNamen = namen.map((name) => name.toUpperCase());
+console.log(upperNamen);
+
+const lowerNamen = namen.map((name) =>name.toLowerCase());
+console.log(lowerNamen)
+//4.
+console.log("Aufgabe 4:");
+function toCaesar(input){
+    const names = input.split("");
+    const newNames = names.map((character) => {
+        const charCode = character.charCodeAt(0);
+        if(charCode <= "Z". charCodeAt()){
+            return String.fromCharCode((charCode - "A".charCodeAt() + 13) % 26 + "A".charCodeAt());
+        } else {
+            return String.fromCharCode((charCode - "a".charCodeAt() + 13) % 26 + "a".charCodeAt());
+        }
+    });
+    return newNames.join("");
+}
+for (let i = 0; i < namen.length; i++) {
+    console.log(`Name: ${toCaesar(namen[i])}`);
+}
+
+//5.
+console.log("Aufgabe 5:");
+//count how many names exist with the same beginning letter
+const firstLetter = namen.map((name) => name[0]);
+const firstLetterCount = firstLetter.reduce((acc, letter) => {
+    if(acc[letter]){
+        acc[letter]++;
+    } else {
+        acc[letter] = 1;
+    }
+    return acc;
+}, {});
+console.log(firstLetterCount);
+
+
+
