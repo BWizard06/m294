@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    //alert("Hallo Welt");
+    let name = prompt("Name?");
+    const hour = new Date().getHours();
+
+
+    if (hour < 5) {
+        alert(`Gute Nacht ${name}`);
+    } else if (hour < 12) {
+        alert(`Guten Morgen ${name}`);
+    } else if (hour < 18) {
+        alert(`Guten Tag ${name}`);
+    } else if (hour < 22) {
+        alert(`Guten Abend ${name}`);
+    } else {
+        alert(`Guten Nacht ${name}`);
+    }
+</script>
+<body>
+    
+</body>
+</html>
