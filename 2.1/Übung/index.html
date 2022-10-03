@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const list = ["Ben", "Jenny", "Michael", "Chloe"];
+
+        //Immutable addition of an element
+        const newList = [...list, "Lukas"];
+        console.log(newList);
+        //Mutable addition of an element
+        list.push("Lukas");
+        console.log(list);
+
+        const numbers = [2, 5, 10, 22, 56, 99];
+        const numbersPower2 = numbers.map((number) => Math.pow(number, 2));
+        console.log(numbersPower2);
+
+        const oddnumbers = numbers.filter((number) => number % 2 === 1);
+        console.log(oddnumbers);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
