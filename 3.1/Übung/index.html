@@ -1,0 +1,55 @@
+¨<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 id="title">Lehrnfahrgesuch</h1>
+    
+    <form id="survey-form">
+        <p>Kategorie:</p>
+        <table id="kategorie">
+            
+            <tr>
+                <td class="center"><p>A1</p></td>
+                <td class="center"><p><b>A</b> 35kW</p></td>
+                <td class="center"><p><b>A</b></p></td>
+                <td class="center"><p>B1</p></td>
+                <td class="center"><p><b>B</b></p></td>
+            </tr>
+            <tr>
+                <td class="center"><input type="radio"></td>
+                <td class="center"><input type="radio"></td>
+                <td class="center"><input type="radio"></td>
+                <td class="center"><input type="radio"></td>
+                <td class="center"><input type="radio"></td>
+            </tr>
+        </table>
+        <p><b>1. Personalien</b>(Bitte Gross-und Kleinschrift)</p>
+        <div class="flex">
+            <fieldset>
+                <label>Name (auch Geburtsname)<input type="text"></label>
+                <label>Vorname(n)<input type="text"></label>
+                <label>Strasse, Nr.<input type="text"></label>
+                <table>
+                    <tr>
+                        <td><label>PLZ</label></td>
+                        <td><label>Wohnort</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="plz"></td>
+                        <td id="wohnort"><input type="text" ></td>
+                    </tr>   
+                </table>
+                <label>Heimatort(e)/Kanton<input type="text"></label>
+            </fieldset>
+            <img src="Screenshot 2022-10-04 143037.png" height="230px">
+        </div>
+
+    </form>
+</body>
+</html>
