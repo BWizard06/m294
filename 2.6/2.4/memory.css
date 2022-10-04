@@ -1,0 +1,6 @@
+#playground {
+    display: grid;
+    grid: repeat(10, 1fr) / repeat(10, 1fr);
+    grid-gap: 1rem;
+    margin: 0 auto;
+}
