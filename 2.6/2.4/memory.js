@@ -4,24 +4,23 @@ const getFlagPath = function(canton) {
   return `./img/${canton}.png`;
 }
 cantons.sort(()=> 0.5 - Math.random());
-const cantonsPicks = cantons.slice(0, 10);
-const cantonsCopies = [...cantons];
-for (cantonCopy of cantonsCopies) {
-  cantons.append(cantonCopy);}
-
+const cantonsPick = cantons.slice(0, 10);
 
 
 
 document.addEventListener('DOMContentLoaded', function() {
   const playground = document.getElementById('playground');
-  cantonsPicks.forEach(function(value) {
+  cantonsPick.forEach(function(value) {
     const tile = document.createElement('div');
     const tileImage = document.createElement('img');
     tileImage.setAttribute('src', getFlagPath(value));
     tile.appendChild(tileImage);
     playground.appendChild(tile);
+    const clone = tile.cloneNode(true);
+    playground.appendChild(clone);  
   });
 });
+
 
 
 
