@@ -1,0 +1,10 @@
+1. Was sind die Grundbausteine einer Webkomponente?
+    - Es soll gewissen Zweck erfüllen
+2. Wie wird ein neues HTML-Element definiert?
+    - mit customElements.define(), man gibt in die Klammer den Namen des Tags in Anführungszeichen
+3. Wie wird ein Attribute auf dem individuellen HTML-Element definiert?
+    - Bei define() die Klasse hinzufügen
+    - Wenn man im HTML diesen custom Tag benutzt, muss man die Attribute, welche man vom Konstruktor 
+    der Klasse bekommt, definieren 
+4. Was bedeutet Lifecycle und wie sieht der Lifecycle dieser Komponente aus?
+    -Lifecycle ist, wenn ein Element instanziert wird, Methoden + Attribute freigegeben
